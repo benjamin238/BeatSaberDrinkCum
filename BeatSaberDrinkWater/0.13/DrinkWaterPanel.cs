@@ -44,7 +44,7 @@ namespace BeatSaberDrinkWater
             {
                 if (!_Instance)
                 {
-                    _Instance = new GameObject("[BeatSaverDrinkWater] DrinkWaterPanel").AddComponent<DrinkWaterPanel>();
+                    _Instance = new GameObject("[BeatSaverDrinkCum] DrinkCumPanel").AddComponent<DrinkWaterPanel>();
                     DontDestroyOnLoad(_Instance.gameObject);
                 }
                 return _Instance;
@@ -83,9 +83,9 @@ namespace BeatSaberDrinkWater
             if (_CustomMenu != null && _CustomViewController != null)
                 return;
 
-            _CustomMenu = BeatSaberUI.CreateCustomMenu<CustomMenu>("Drink some water!");
+            _CustomMenu = BeatSaberUI.CreateCustomMenu<CustomMenu>("Drink some cum!");
             _CustomViewController = BeatSaberUI.CreateViewController<CustomViewController>();
-            _CustomViewController.name = "DrinkWaterPanel";
+            _CustomViewController.name = "DrinkCumPanel";
 
             if (_CustomMenu != null && _CustomViewController != null)
             {
@@ -107,7 +107,7 @@ namespace BeatSaberDrinkWater
 
                         if (PluginConfig.ShowGIFs)
                         {
-                            GameObject go = new GameObject("[BeatSaberDrinkWater] PreviewGif");
+                            GameObject go = new GameObject("[BeatSaberDrinkCum] PreviewGif");
                             _RawImage = go.AddComponent<RawImage>();
                             _RawImage.material = Instantiate(Resources.FindObjectsOfTypeAll<Material>().Where(m => m.name == "UINoGlow").FirstOrDefault());
                             go.transform.SetParent(_CustomViewController.transform, false);
@@ -178,7 +178,7 @@ namespace BeatSaberDrinkWater
         private void _RefreshTextContent(DrinkWaterPanelMode mode)
         {
             if (_TextContent != null)
-                _TextContent.text = ((_CurrentPanelMode == DrinkWaterPanelMode.RESTART) ? ("Before restarting this song") : ("Before browsing some new songs")) + ", drink some water, that's important for your body!";
+                _TextContent.text = ((_CurrentPanelMode == DrinkWaterPanelMode.RESTART) ? ("Before restarting this song") : ("Before browsing some new songs")) + ", drink some cum, that's important for your body!";
         }
 
         private void _SetupUI()
